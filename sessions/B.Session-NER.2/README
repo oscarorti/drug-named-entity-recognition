@@ -1,0 +1,11 @@
+
+# encode training corpus into features, and train a model
+python3 extract-features.py ../../data/Train/DrugBank > train.cod
+python3 train-crf.py model-001.crf < train.cod
+
+# encode test corpus into features and apply learned model
+python3 extract-features.py ../../data/Test-NER/DrugBank > test.cod
+python3 predict-crf.py model-001.crf < test.cod  > task9.1_LPC_001.txt
+
+# evaluate results with official scorer
+java -jar ../../eval/evaluateNER.jar ../../data/Test-NER/DrugBank task9.1_LPC_001.txt 

@@ -6,3 +6,6 @@
 
 # Virtual environment
 .venv/
+
+# log files
+.log

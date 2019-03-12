@@ -88,4 +88,4 @@ def inference_dataset(dataset_path: str, classify_token: callable):
 if __name__ == '__main__':
     # Usage:  baseline-NER.py target-dir
     datadir = sys.argv[1]
-    inference_dataset(datadir, classify_token=classify_by_substring_mapping)
+    inference_dataset(datadir, classify_token=suffix_similarity)

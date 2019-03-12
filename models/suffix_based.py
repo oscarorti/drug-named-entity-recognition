@@ -2,8 +2,8 @@
 from nltk import edit_distance
 
 import datasets
-from data_exploration import unique_brands
-from data_exploration import unique_drugs
+from dataset_analiser import unique_brands
+from dataset_analiser import unique_drugs
 
 
 drugbank_drugs = list(unique_drugs(datasets.DRUGBANK_TRAIN).keys())
